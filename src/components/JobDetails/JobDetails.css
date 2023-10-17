@@ -1,0 +1,21 @@
+.banner {
+  background: url(../../images/banner.png);
+  background-blend-mode: darken;
+  background-position: center;
+
+  background-repeat: no-repeat;
+}
+
+.bg-color {
+  border-radius: 8px;
+  background: linear-gradient(
+    90deg,
+    rgba(126, 144, 254, 0.1) 0%,
+    rgba(152, 115, 255, 0.1) 100%
+  );
+}
+
+.button {
+  border-radius: 8px;
+  background: var(--Linear, linear-gradient(90deg, #7e90fe 0%, #9873ff 100%));
+}
