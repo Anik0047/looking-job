@@ -19,7 +19,7 @@ const FeaturedJobs = () => {
       setDisplayJobs(onsiteJobs);
     }
   };
-  console.log(displayJobs);
+  // console.log(displayJobs);
 
   useEffect(() => {
     fetch("jobs.json")
@@ -70,13 +70,31 @@ const FeaturedJobs = () => {
         } */}
       </div>
       <div className="text-center mt-8">
-        <div className={datalength === jobs.length ? "hidden" : ""}>
+        {/* <div className={datalength === jobs.length ? "hidden" : ""}> */}
+        <div>
+
+        {
+          datalength === jobs.length ? 
           <button
+          onClick={() => setDatalength(6)}
+          className="btn btn-primary button border-0"
+        >
+          Show less
+        </button> : 
+        <button
             onClick={() => setDatalength(jobs.length)}
             className="btn btn-primary button border-0"
           >
             Show All
           </button>
+        }
+
+          {/* <button
+            onClick={() => setDatalength(jobs.length)}
+            className="btn btn-primary button border-0"
+          >
+            Show All
+          </button> */}
         </div>
       </div>
     </div>
